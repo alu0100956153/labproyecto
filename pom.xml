@@ -7,6 +7,17 @@
     <groupId>com.javadeeplearningcookbook.app</groupId>
     <artifactId>cookbookapp-nlp</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+    <properties>
+
+	  <sonar.sources>src</sonar.sources>
+      <sonar.inclusions>**/**</sonar.inclusions>
+      <sonar.projectKey>alu0100990522</sonar.projectKey>
+      <sonar.organization>santiagovv</sonar.organization>
+      <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+      <sonar.login>fadae8998c781333ccba1218d66e9509ce15410f</sonar.login>
+
+    </properties>
     <build>
         <plugins>
             <plugin>
