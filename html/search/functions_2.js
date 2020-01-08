@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['testapp_12',['testApp',['../class_proyecto___final___lab__2_1_1_proyecto_final_lab_1_1_app_test.html#a768fd20686a10fecdfc614c8dbfe5260',1,'Proyecto_Final_Lab_2.ProyectoFinalLab.AppTest.testApp()'],['../class_la_b_1_1proyecto_f_1_1_test_word2_vec.html#a5187dab2a907c738206b2ce4d11e7e76',1,'LaB.proyectoF.TestWord2Vec.testApp()']]],
-  ['testword2vec_13',['TestWord2Vec',['../class_la_b_1_1proyecto_f_1_1_test_word2_vec.html#a48448b7a0f20a3d3f205b1e34666c463',1,'LaB::proyectoF::TestWord2Vec']]]
+  ['suite_13',['suite',['../class_proyecto___final___lab__2_1_1_proyecto_final_lab_1_1_app_test.html#a96b0c13a06ecee9ac31fb80604cc99a8',1,'Proyecto_Final_Lab_2.ProyectoFinalLab.AppTest.suite()'],['../class_la_b_1_1proyecto_f_1_1_test_word2_vec.html#a9058534a98b88a1ac8fc3157136da0ca',1,'LaB.proyectoF.TestWord2Vec.suite()']]]
 ];

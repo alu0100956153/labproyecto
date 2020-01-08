@@ -35,6 +35,10 @@ import junit.framework.TestSuite;
 public class TestWord2Vec 
     extends TestCase
 {
+	
+	
+	
+	
     /**
      * Create the test case
      *
@@ -42,6 +46,9 @@ public class TestWord2Vec
      */
     public TestWord2Vec( String testName )
     {
+    	
+    	getInputFile()
+    	getOutPutFile()
         super( testName );
     }
 
