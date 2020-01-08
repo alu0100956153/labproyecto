@@ -14,7 +14,6 @@ import org.nd4j.linalg.io.ClassPathResource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.sun.jna.platform.win32.COM.DispatchVTable.GetIDsOfNamesCallback;
 
 import java.io.File;
 import java.io.IOException;
@@ -38,16 +37,23 @@ public class Word2VecModelExample {
 	 * \brief  funcion que obtiene el nombre de un fichero introducido por consola
 	 * \return nombre del archivo elegido por el usuario
 	 */
-	private static String getInputFile() {							
+	public static String getInputFile() {							
 		System.out.println("Inserte nombre del fichero: ");
-		Scanner sc = new Scanner(System.in);                  
-		 return sc.next();
+		Scanner sc = new Scanner(System.in);
+		if (!sc.hasNext()) {
+			return null;
+		}
+		String result = sc.next();
+		if (result.length()>20) {
+			result = result.substring(0, 5);
+		}
+		 return result+ ".txt";
 	}
 	/**
 	 * \brief funcion encargada de crear el archivo con el nombre que quiera el usuario. Se le añadirá la extensión txt
 	 * \return nombre del fichero de salida
 	 */
-	private static String getOutPutFile() {
+	public static String getOutPutFile() {
 		String respuesta= "";					/* Funcion encargada de crear el archivo con el nombre que quiera el usuario debe de terminar en .txt */
 		
 		Scanner sc = new Scanner(System.in);
@@ -68,7 +74,7 @@ public class Word2VecModelExample {
 			return result;
 		}
 		else {
-			return word;
+			return word +".txt";
 		}
 	
 	}

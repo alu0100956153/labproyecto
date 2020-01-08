@@ -1,0 +1,11 @@
+digraph "LaB.proyectoF.main.Word2VecModelExample.main"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="LaB.proyectoF.main.Word2\lVecModelExample.main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="funcion main que realiza la creación de la red y el procesamiento además de realizar un output"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="LaB.proyectoF.main.Sentence\lDataPreProcessor.setPreprocessor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_la_b_1_1proyecto_f_1_1main_1_1_sentence_data_pre_processor.html#a5f764c0ed7b6ba2fa20983f41269a0c9",tooltip="preprocesado de"];
+}
