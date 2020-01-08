@@ -13,8 +13,9 @@
 
     <properties>
 
-	  <sonar.sources>src</sonar.sources>
-      <sonar.inclusions>**/**</sonar.inclusions>
+	  <sonar.sources>src/main/</sonar.sources>
+      <!-- <sonar.inclusions>src/main/**</sonar.inclusions>-->
+      <sonar.tests>src/test/</sonar.tests>
       <sonar.java.binaries>target</sonar.java.binaries>
       <sonar.projectKey>alu0100990522</sonar.projectKey>
       <sonar.organization>santiagovv</sonar.organization>
@@ -23,8 +24,8 @@
 
     </properties>
     <build>
-        	     <!--   <sourceDirectory>src/main</sourceDirectory> -->
-        		<!--	<testSourceDirectory>src/test</testSourceDirectory> -->
+        	    <sourceDirectory>src/main</sourceDirectory> 
+        		<testSourceDirectory>src/test</testSourceDirectory> 
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
