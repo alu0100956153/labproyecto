@@ -21,11 +21,15 @@
       <sonar.organization>santiagovv</sonar.organization>
       <sonar.host.url>https://sonarcloud.io</sonar.host.url>
       <sonar.login>fadae8998c781333ccba1218d66e9509ce15410f</sonar.login>
+      
+      <sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
+      <sonar.jacoco.itReportPath>${project.basedir}/target/jacoco-it.exec</sonar.jacoco.itReportPath>
 
     </properties>
     <build>
         	    <sourceDirectory>src/main</sourceDirectory> 
-        		<testSourceDirectory>src/test</testSourceDirectory> 
+        		<testSourceDirectory>src/test</testSourceDirectory>
+      <pluginManagement> 
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -75,6 +79,52 @@
                         </execution>
                     </executions>
                 </plugin>
+                
+                
+                <plugin>
+			        <groupId>org.jacoco</groupId>
+			        <artifactId>jacoco-maven-plugin</artifactId>
+			        <version>0.6.5.201403032054</version>
+			        <configuration>
+			          <propertyName>jacoco.agent.argLine</propertyName>
+			          <destFile>${sonar.jacoco.itReportPath}</destFile>
+			          <append>true</append>
+			        </configuration>
+			        <executions>
+			          <execution>
+			            <id>agent</id>
+			            <goals>
+			              <goal>prepare-agent</goal>
+			            </goals>
+			          </execution>
+			        </executions>
+			      </plugin>
+			      <plugin>
+			        <artifactId>maven-failsafe-plugin</artifactId>
+			        <version>2.14.1</version>
+			        <dependencies>
+			          <dependency>
+			            <groupId>org.apache.maven.surefire</groupId>
+			            <artifactId>surefire-junit47</artifactId>
+			            <version>2.14.1</version>
+			          </dependency>
+			        </dependencies>
+			        <configuration>
+			          <argLine>${jacoco.agent.argLine}</argLine>
+			          <testFailureIgnore>true</testFailureIgnore>
+			          <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
+			        </configuration>
+			        <executions>
+			          <execution>
+			            <goals>
+			              <goal>integration-test</goal>
+			              <goal>verify</goal>
+			            </goals>
+			          </execution>
+			        </executions>
+			      </plugin>
+			      
+			      
             <plugin>
               <artifactId>maven-site-plugin</artifactId>
               <version>3.7.1</version>
@@ -109,6 +159,8 @@
                 <version>2.22.0</version>
             </plugin>
         </plugins>
+        
+        </pluginManagement>
     </build>
     <dependencies>
         <dependency>

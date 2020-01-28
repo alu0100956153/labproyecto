@@ -1,9 +1,0 @@
-digraph "Representación gráfica de la clase"
-{
- // INTERACTIVE_SVG=YES
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="LaB.proyectoF.main.Word2\lVecModelExample",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_la_b_1_1proyecto_f_1_1main_1_1_word2_vec_model_example.html",tooltip="clase que mediante deeplearning crea una modelo de similitud sintactica entre palabras"];
-}

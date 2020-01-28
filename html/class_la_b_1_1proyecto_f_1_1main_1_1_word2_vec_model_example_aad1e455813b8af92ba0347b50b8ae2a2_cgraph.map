@@ -1,0 +1,6 @@
+<map id="LaB.proyectoF.main.Word2VecModelExample.main" name="LaB.proyectoF.main.Word2VecModelExample.main">
+<area shape="rect" id="node1" title="funcion main que realiza la creación de la red y el procesamiento además de realizar un output" alt="" coords="5,71,187,112"/>
+<area shape="rect" id="node2" href="$class_la_b_1_1proyecto_f_1_1main_1_1_word2_vec_model_example.html#af85989dbf6bd3c854f5babc4c8d4a9bd" title="funcion que obtiene el nombre de un fichero introducido por consola" alt="" coords="247,5,449,47"/>
+<area shape="rect" id="node3" href="$class_la_b_1_1proyecto_f_1_1main_1_1_word2_vec_model_example.html#a8ea2584444d242299d7678e79e47c868" title="funcion encargada de crear el archivo con el nombre que quiera el usuario. Se le añadirá la extensión txt" alt="" coords="241,71,455,112"/>
+<area shape="rect" id="node4" href="$class_la_b_1_1proyecto_f_1_1main_1_1_sentence_data_pre_processor.html#a5f764c0ed7b6ba2fa20983f41269a0c9" title="preprocesado de" alt="" coords="235,136,461,177"/>
+</map>
