@@ -32,6 +32,8 @@ import java.util.Scanner;
  * */
 public class Word2VecModelExample {
 	
+	
+	static String a;
 	/**
 	 * 
 	 * \brief  funcion que obtiene el nombre de un fichero introducido por consola
@@ -71,12 +73,39 @@ public class Word2VecModelExample {
 			LocalDateTime now = LocalDateTime.now();  
 			
 			String result = word+"_"+dtf.format(now)+".txt";
+			
+			a = result;
 			return result;
 		}
 		else {
+			a = word + ".txt";
 			return word +".txt";
+			
 		}
 	
+	}
+	
+	
+	public static String NoFile(String ruta) {
+		
+		
+		
+		File af = new File(ruta);
+		
+		String result = null;
+		if (af.exists()) {
+		      System.out.println("El archivo se ha creado correctamente");
+		      return result = "El archivo  existe";
+		     
+		    } else {
+		      System.out.println("El archivo se ha creado correctamente");
+		      return result = "El archivo no existe";
+		
+		    }
+		
+		
+		
+		
 	}
 	
     
@@ -124,6 +153,6 @@ public class Word2VecModelExample {
         //save word vectors for tSNE visualization.
         WordVectorSerializer.writeWordVectors(model.lookupTable(),new File("E://Programas_ULL/Pruebas_misticas/"+getOutPutFile()));
         WordVectorSerializer.writeWord2VecModel(model, "E://Programas_ULL/Pruebas_misticas/model.zip");
-
+        NoFile("E://Programas_ULL/Pruebas_misticas/"+a);
     }
 }

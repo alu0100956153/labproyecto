@@ -4,7 +4,7 @@
 
 
 import java.io.ByteArrayInputStream;
-
+import java.io.File;
 import java.io.InputStream;
 
 import static org.junit.Assert.*;
@@ -57,6 +57,28 @@ public class TestWord2Vec {
 		
 		
 	}
+
 	
-	
+	@Test
+	public void testNoFile() {
+
+
+		File fichero = new File("words.txt");
+		
+		String ruta = fichero.getAbsolutePath();
+		
+		String result= Word2VecModelExample.NoFile(ruta);
+		
+		assertEquals(result.equals("El archivo  existe"),true);
+		
+		//assertEquals(result.equals("word.txt"),true);
+		
+		//String total= Word2VecModelExample.NoFile(result);
+		//assertEquals(total.equals("El archivo existe"),true);
+		
+		
+		
+	}
+
+
 }
