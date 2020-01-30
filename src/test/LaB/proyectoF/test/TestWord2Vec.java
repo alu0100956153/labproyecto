@@ -63,13 +63,13 @@ public class TestWord2Vec {
 	public void testNoFile() {
 
 
-		File fichero = new File("words.txt");
+		File fichero = new File("wors.txt");
 		
 		String ruta = fichero.getAbsolutePath();
 		
 		String result= Word2VecModelExample.NoFile(ruta);
 		
-		assertEquals(result.equals("El archivo  existe"),true);
+		assertEquals(result.equals("El archivo no existe"),true);
 		
 		//assertEquals(result.equals("word.txt"),true);
 		
